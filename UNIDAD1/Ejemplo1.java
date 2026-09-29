@@ -3,6 +3,7 @@ package unidad1;
 import java.util.Scanner;
 
 public class Ejemplo1 {
+
     /**
      * Función principal del programa
      * 
@@ -12,13 +13,29 @@ public class Ejemplo1 {
     public static void main(String args[]) {
 
         // Definimos una variable para la edad
+        // tipo_dato nombre = valor_inicial;
         int edad = 0;
+        long kmCarrera = 1231231222222222222L;
+        float pesoAnimal = 3450.34f;
+        double pi = 3.14159;
+        char letra = 'b';
+        boolean estaCasado;
+
+        edad = 132;
+
         String bienVest = "si";
         // Definimos un objeto de tipo scanner para poder leer
         Scanner teclado = new Scanner(System.in);
         // Leemos de teclado en la misma linea sin 'ln'
         System.out.print("Escribe tu edad: ");
         edad = teclado.nextInt();
+
+        // para saber si un numero es par lo dividimos entre 2 y sacamos el resto de la
+        // division
+        // Si sobra 0 entonces sabemos que es par sino es impar
+        // El operador % devuelve el resto de la division entera
+        if (edad % 2 == 0)
+            System.out.println("Tu edad es par");
 
         System.out.print("Vienes presentable?(si/no): ");
         bienVest = teclado.next();
