@@ -15,20 +15,33 @@ public class Ejemplo1 {
         // Definimos una variable para la edad
         // tipo_dato nombre = valor_inicial;
         int edad = 0;
+        String nombre = "";// Los String van entre " "
         long kmCarrera = 1231231222222222222L;
         float pesoAnimal = 3450.34f;
         double pi = 3.14159;
         char letra = 'b';
         boolean estaCasado;
+        String bienVest = "si";
 
+        // Operador de asignacion
         edad = 132;
 
-        String bienVest = "si";
         // Definimos un objeto de tipo scanner para poder leer
         Scanner teclado = new Scanner(System.in);
         // Leemos de teclado en la misma linea sin 'ln'
         System.out.print("Escribe tu edad: ");
         edad = teclado.nextInt();
+
+        System.out.print("Vienes presentable?(si/no): ");
+        bienVest = teclado.next();
+        // Ponemos un next adicional para evitar el error de salto
+        teclado.nextLine();
+
+        System.out.print("Cuál es tu nombre?:");
+        // nextline lee la linea completa y la guarda en el String
+        nombre = teclado.nextLine();
+
+        System.out.println("Tu nombre es " + nombre + " tu edad es " + edad + " y " + bienVest + " vienes presentable");
 
         // para saber si un numero es par lo dividimos entre 2 y sacamos el resto de la
         // division
@@ -37,13 +50,17 @@ public class Ejemplo1 {
         if (edad % 2 == 0)
             System.out.println("Tu edad es par");
 
-        System.out.print("Vienes presentable?(si/no): ");
-        bienVest = teclado.next();
+        // Para saber si algo es distinto a otro elemento usamos !=
+        if (edad != 0)
+            System.out.println("No eres un recién nacido");
+        // En java tenemos los operadores > < >= y <=
+        if (edad <= 0)
+            System.out.println("La edad tiene que ser positiva");
+
         /*
          * Solo entran en la discoteca si son
          * mayores de 18 años y van bien vestidos
          */
-        System.out.print("ok, tienes " + edad + " años y ");
 
         /*
          * Con la estructura if comprobamos si una condicion es cierta
@@ -55,6 +72,16 @@ public class Ejemplo1 {
         } else {
             System.out.println(" no vas bien vestido");
         }
+
+        // Para comparar String usamos .equals, si usamos .equalIgnoreCase seran iguales
+        // Tanto si coinciden en minusculas o mayúsculas
+        if (nombre.equalsIgnoreCase("Jose"))
+            System.out.println("Tu nombre es jose");
+
+        // El segurata nos va a dejar pasar
+        // si vamos bien vestidos, tenemos más de 17 años o si nos llamamos Jose
+        if ((bienVest.equals("si") && edad >= 18 || nombre.equalsIgnoreCase("Jose")))
+            System.out.println("Puedes Pasar");
 
         // Cerramos el scanner
         teclado.close();
