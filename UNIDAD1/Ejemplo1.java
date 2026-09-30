@@ -15,7 +15,7 @@ public class Ejemplo1 {
         // Definimos una variable para la edad
         // tipo_dato nombre = valor_inicial;
         int edad = 0;
-        String nombre = "";// Los String van entre " "
+        String nombre = "Inicial";// Los String van entre " "
         long kmCarrera = 1231231222222222222L;
         float pesoAnimal = 3450.34f;
         double pi = 3.14159;
