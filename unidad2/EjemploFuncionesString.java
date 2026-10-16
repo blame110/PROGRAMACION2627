@@ -12,6 +12,7 @@ public class EjemploFuncionesString {
 
         System.out.print("Introduce una frase: ");
         frase = teclado.nextLine();
+        frase = "";
 
         // Para saber la cantidad de caracteres que tiene un String se usa la funcion
         // lenght()
