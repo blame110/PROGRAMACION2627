@@ -26,5 +26,9 @@ public class EjemploConversiones {
 
         }
 
+        String t = "  hola  "; // dos espacios a cada lado
+        t=t.trim();
+        System.out.println(t.length());
+
     }
 }
