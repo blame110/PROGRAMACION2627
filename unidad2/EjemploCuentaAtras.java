@@ -54,7 +54,6 @@ public class EjemploCuentaAtras {
             System.out.println(j);
         }
 
-
         teclado.close();
 
     }
