@@ -1,6 +1,7 @@
 package unidad1;
 
 import java.util.Scanner;
+import unidad3.Producto;
 
 public class Ejemplo1 {
 
